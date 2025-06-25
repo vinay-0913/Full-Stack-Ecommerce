@@ -13,9 +13,9 @@
 * Delete Products
 
 ## It is also connected to MongoDB, where admin can: 
-> See users
-> See orders
-> See Products
+* See users
+* See orders
+* See Products
 
 ## Its also has Razorpay payment gateway
   
