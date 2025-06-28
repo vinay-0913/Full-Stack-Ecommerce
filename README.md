@@ -28,7 +28,7 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
     ```
 3. **Add Environmental Variables**
    - Create .env file all directories :
-  - In frontend :
+    - In frontend :
      ```bash
     VITE_BACKEND_URL = http://localhost:4000
     VITE_RAZORPAY_KEY_ID = ' '
@@ -45,18 +45,18 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
     RAZORPAY_KEY_SECRET = ''
     RAZORPAY_KEY_ID = ' '
     ```
-     - In admin :
+    - In admin :
      ```bash
     VITE_BACKEND_URL = 'http://localhost:4000'
     ```
 **Start the development server**:
    - Run the backend server:
-    ```bash
-     nodemon
+   ```bash
+    nodemon
     ```
     - Run both frontend & backend server:
-    ```bash
-     npm run dev
+   ```bash
+    npm run dev
     ```
   
 
