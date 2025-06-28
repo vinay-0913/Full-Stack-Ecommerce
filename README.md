@@ -29,7 +29,7 @@ Check out the live demo of the application [here](https://full-stack-ecommerce-g
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/vinay-0913/News-Aggregator-with-Recommendation-System.git
+    git clone https://github.com/vinay-0913/Full-Stack-Ecommerce.git
     ```
 2. **Install dependencies**:
    - Navigate to the front, backend, admin directory and run:
