@@ -1,6 +1,12 @@
 # Full Stack E-commerce Web App
 This is a full stack E-commerce Web App project build using **MERN Stack** (MongoDB, Express, React, Node.js). In this project users can browse Collections, Add to Cart, Pay through COD or Razorpay, track theri order. Admin can add, update, delete products from admin panel. 
 
+![Website Screenshot](./frontend/public/Screenshot1.png) 
+
+![Website Screenshot](./frontend/public/Screenshot2.png)
+
+![Website Screenshot](./frontend/public/Screenshot3.png)
+
 ## Features: 
 -Product Items Page
 -Product Display Page
