@@ -12,13 +12,13 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
 Check out the live demo of the application [here](https://full-stack-ecommerce-gray.vercel.app).
 
 ## Features: 
--Product Items Page
--Product Display Page
--Seach and sorting feature
--Cart Page
--Place Order Page : COD or Razorpay payment gateway
--Your Orders Page
--Create Account and Login/Logout Page with JWT Authentication
+-Product Items Page.
+-Product Display Page.
+-Seach and sorting feature.
+-Cart Page.
+-Place Order Page : COD or Razorpay payment gateway.
+-Your Orders Page.
+-Create Account and Login/Logout Page with JWT Authentication.
 
 ## Admin Panel where Admin can : 
 * Add Products
