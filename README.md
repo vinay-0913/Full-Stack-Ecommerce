@@ -49,7 +49,7 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
      ```bash
     VITE_BACKEND_URL = 'http://localhost:4000'
     ```
-4 **Start the development server**:
+4. **Start the development server**:
    - Run the backend server:
    ```bash
     nodemon
