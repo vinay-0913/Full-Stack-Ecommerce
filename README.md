@@ -1,21 +1,72 @@
-# This is a Full Stack E-commerce Web App
-## Features Include: 
-1. Product Items
-2. Product Display Page
-3. Place Order Page
-4. Your Orders Page
-5. Create Account and Login/Logout Page
+# Full Stack E-commerce Web App
+This is a full stack E-commerce Web App project build using **MERN Stack** (MongoDB, Express, React, Node.js). In this project users can browse Collections, Add to Cart, Pay through COD or Razorpay, track theri order. Admin can add, update, delete products from admin panel. 
 
-## It also has Admin Panel where Admin can : 
+![Website Screenshot](./frontend/public/Screenshot1.png) 
+
+![Website Screenshot](./frontend/public/Screenshot2.png)
+
+![Website Screenshot](./frontend/public/Screenshot3.png)
+
+## 🚀 Live Demo
+
+Check out the live demo of the application [here](https://full-stack-ecommerce-gray.vercel.app).
+
+## Features: 
+- Product Items Page.
+- Product Display Page.
+- Seach and sorting feature.
+- Cart Page.
+- Place Order Page : COD or Razorpay payment gateway.
+- Your Orders Page.
+- Create Account and Login/Logout Page with JWT Authentication.
+
+## Admin Panel where Admin can : 
 * Add Products
 * Update Products
-* Update Placed Orders
 * Delete Products
 
-## It is also connected to MongoDB, where admin can: 
-* See users
-* See orders
-* See Products
+## 🖥️ Setup Instructions
 
-## Its also has Razorpay payment gateway
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/vinay-0913/Full-Stack-Ecommerce.git
+    ```
+2. **Install dependencies**:
+   - Navigate to the front, backend, admin directory and run:
+    ```bash
+    npm install
+    ```
+3. **Add Environmental Variables**
+   - Create .env file all directories :
+    - In frontend :
+     ```bash
+    VITE_BACKEND_URL = http://localhost:4000
+    VITE_RAZORPAY_KEY_ID = ' '
+    ```
+    - In backend : 
+     ```bash
+    MONGODB_URI = " "
+    CLOUDINARY_API_KEY = " "
+    CLOUDINARY_SECRET_KEY = " "
+    CLOUDINARY_NAME = " "
+    JWT_SECRET = " "
+    ADMIN_EMAIL = " "
+    ADMIN_PASSWORD = " "
+    RAZORPAY_KEY_SECRET = ''
+    RAZORPAY_KEY_ID = ' '
+    ```
+    - In admin :
+     ```bash
+    VITE_BACKEND_URL = 'http://localhost:4000'
+    ```
+4. **Start the development server**:
+   - Run the backend server:
+   ```bash
+    nodemon
+    ```
+    - Run both frontend & backend server:
+   ```bash
+    npm run dev
+    ```
   
+
