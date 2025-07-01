@@ -4,7 +4,7 @@ import productModel from "../models/productModel.js"
 // function for add product
 const addProduct = async (req, res) =>{
     try{
-        const {name,description,price,category,subCategory,sizes,bestseller} = req.body
+        const {name,description,price,category,subCategory,sizes,bestseller,location,shopName} = req.body
 
         const image1 = req.files.image1 && req.files.image1[0]
         const image2 = req.files.image2 && req.files.image2[0]
@@ -29,7 +29,9 @@ const addProduct = async (req, res) =>{
             bestseller: bestseller === "true"? true: false,
             sizes:JSON.parse(sizes),
             image:imagesURL,
-            date: Date.now()
+            date: Date.now(),
+            location,
+            shopName
         }
 
         console.log(productData)
@@ -42,17 +44,34 @@ const addProduct = async (req, res) =>{
         res.json({success:false,message:error.message})
     }
 }
-// function for list product
-const listProducts = async (req, res) =>{
-    try{
-        const products = await productModel.find({});
-        res.json({success:true,products})
 
-    }catch(error){
-        console.log(error)
-        res.json({success:false,message:error.message})
-    }
-}
+// function to display location based product: 
+
+const getProducts = async (req, res) => {
+  try {
+    const { location } = req.query;
+    const filter = location ? { location } : {};
+    const products = await productModel.find(filter);
+    res.json({ success: true, products });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+};
+
+// function for list product
+const listProducts = async (req, res) => {
+  try {
+    const { location } = req.query;
+    const filter = location ? { location } : {};
+    const products = await productModel.find(filter);
+    res.json({ success: true, products });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
 // function for removing product
 const removeProduct = async (req, res) =>{
     try {
@@ -77,4 +96,4 @@ const singleProduct = async (req, res) =>{
     }
 }
 
-export {listProducts, addProduct, removeProduct,singleProduct}
+export {listProducts, addProduct,getProducts, removeProduct,singleProduct}

@@ -4,7 +4,7 @@ import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
 
-const Add = ({token}) => {
+const Add = ({ token }) => {
 
   const [image1, setImage1] = useState(false)
   const [image2, setImage2] = useState(false)
@@ -18,8 +18,12 @@ const Add = ({token}) => {
   const [subCategory, setSubCategory] = useState("Topwear");
   const [bestseller, setBestseller] = useState("");
   const [sizes, setSizes] = useState([]);
+  const [location, setLocation] = useState("Raipur");
+  const [shopName, setShopName] = useState('');
 
-  const onSubmitHandler = async (e)=>{
+
+
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
 
     try {
@@ -31,30 +35,36 @@ const Add = ({token}) => {
       formData.append("subCategory", subCategory)
       formData.append("bestseller", bestseller)
       formData.append("sizes", JSON.stringify(sizes))
+      formData.append("location", location)
+      formData.append("shopName", shopName);
 
-      image1 && formData.append("image1",image1)
-      image2 && formData.append("image2",image2)
-      image3 && formData.append("image3",image3)
-      image4 && formData.append("image4",image4)
 
-      const response = await axios.post(backendUrl + "/api/product/add", formData, {headers:{token}} )
+
+      image1 && formData.append("image1", image1)
+      image2 && formData.append("image2", image2)
+      image3 && formData.append("image3", image3)
+      image4 && formData.append("image4", image4)
+
+      const response = await axios.post(backendUrl + "/api/product/add", formData, { headers: { token } })
       if (response.data.success) {
-         toast.success(response.data.message) 
-         setName('')
-         setDescription('')
-         setImage1(false)      
-         setImage2(false)      
-         setImage3(false)      
-         setImage4(false) 
-         setPrice('')     
-      }else{
+        toast.success(response.data.message)
+        setName('')
+        setDescription('')
+        setImage1(false)
+        setImage2(false)
+        setImage3(false)
+        setImage4(false)
+        setPrice('')
+        setShopName('')
+
+      } else {
         toast.error(response.data.message)
       }
-      
+
     } catch (error) {
       console.log(error);
       toast.error(error.message)
-      
+
     }
   }
 
@@ -109,10 +119,32 @@ const Add = ({token}) => {
         </div>
 
         <div>
+          <p className='mb-2'>Location</p>
+          <select onChange={(e) => setLocation(e.target.value)} className='w-full px-3 py-2'>
+            <option value="Raipur">Raipur</option>
+            <option value="Durg">Durg</option>
+            <option value="Bhilai">Bhilai</option>
+          </select>
+        </div>
+
+        <div>
           <p className='mb-2'>Product Price</p>
           <input onChange={(e) => setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="Number" placeholder='25' />
         </div>
       </div>
+
+      <div className='w-full'>
+          <p className='mb-2'>Shop Name</p>
+          <input
+            onChange={(e) => setShopName(e.target.value)}
+            value={shopName}
+            className='w-full max-w-[500px] px-3 py-2'
+            type='text'
+            placeholder='e.g. Fashion Hub, Style Mart'
+            required
+          />
+        </div>
+
       <div>
         <p className='mb-2'>Product Sizes</p>
         <div className='flex gap-3'>
@@ -133,7 +165,7 @@ const Add = ({token}) => {
 
 
       <div className='flex gap-2 mt-2'>
-        <input onChange={()=>setBestseller(prev => !prev)} checked={bestseller} type="checkbox" id='bestseller' />
+        <input onChange={() => setBestseller(prev => !prev)} checked={bestseller} type="checkbox" id='bestseller' />
         <label className='cursor-pointer' htmlFor="bestseller">Add to bestseller</label>
       </div>
 
