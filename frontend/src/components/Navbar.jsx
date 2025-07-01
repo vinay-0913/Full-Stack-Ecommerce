@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { assets } from '../assets/frontend_assets/assets'
 import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6"; 
 
 const Navbar = () => {
   const { setShowSearch, getCartCount, navigate, token, setToken, setCartItems, selectedLocation, setSelectedLocation } = useContext(ShopContext)
