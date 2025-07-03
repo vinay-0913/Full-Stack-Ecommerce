@@ -1,5 +1,5 @@
 # Full Stack E-commerce Web App
-This is a full stack E-commerce Web App project build using **MERN Stack** (MongoDB, Express, React, Node.js). In this project users can browse Collections, Add to Cart, Pay through COD or Razorpay, track theri order. Admin can add, update, delete products from admin panel. 
+This is a full stack E-commerce Web App project build using **MERN Stack** (MongoDB, Express, React, Node.js). In this project users can select a City and the products listed on that city can display in collection page, they can browse Collections, Add to Cart, Pay through COD or Razorpay, track theri order. Admin can add, update, delete products from admin panel. 
 
 ![Website Screenshot](./frontend/public/Screenshot1.png) 
 
@@ -12,6 +12,8 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
 Check out the live demo of the application [here](https://full-stack-ecommerce-gray.vercel.app).
 
 ## Features: 
+- User can select location.
+- User can see product's shop name. 
 - Product Items Page.
 - Product Display Page.
 - Seach and sorting feature.
