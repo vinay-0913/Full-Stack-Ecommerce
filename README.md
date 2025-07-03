@@ -3,9 +3,9 @@ This is a full stack E-commerce Web App project build using **MERN Stack** (Mong
 
 ![Website Screenshot](./frontend/public/Screenshot1.png) 
 
-![Website Screenshot](./frontend/public/Screenshot2.png)
-
 ![Website Screenshot](./frontend/public/Screenshot3.png)
+
+![Website Screenshot](./frontend/public/Screenshot2.png)
 
 ## 🚀 Live Demo
 
